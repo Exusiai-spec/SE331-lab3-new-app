@@ -18,6 +18,10 @@ export interface PassengerData {
   __v: number;
 }
 
+export interface MessageState {
+    message: string
+  }
+  
 export interface PassengerResponse {
   totalPassengers: number;
   totalPages: number;

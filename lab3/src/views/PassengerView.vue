@@ -1,8 +1,6 @@
 <script setup lang="ts">
 import { type Data } from '@/types'
-import {
-  ref, onMounted, computed, watch
-} from 'vue'
+import { ref, onMounted, computed, watch } from 'vue'
 import PassengerCard from '@/components/PassengerCard.vue';
 import PassengerServices from '@/services/PassengerServices';
 import { useRoute, useRouter } from 'vue-router';

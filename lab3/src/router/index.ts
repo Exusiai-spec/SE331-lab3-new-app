@@ -18,6 +18,12 @@ const router = createRouter({
       props: route => ({ page: parseInt(route.query.page?.toString() || '1') }),
     },
     {
+      path:'/passengerlist',
+      name: 'passenger-list-view',
+      component: PassengerView,
+      props: route => ({ page: parseInt(route.query.page?.toString() || '1') }),
+    },
+    {
       path: '/passenger/:id',
       name: 'passenger-layout-view',
       component: PassengerLayoutView,
