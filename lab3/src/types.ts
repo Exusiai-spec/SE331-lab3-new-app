@@ -28,3 +28,6 @@ export interface PassengerResponse {
   data: PassengerData[];
 }
 export type Data = PassengerData;
+export interface PassageState {
+  passengerData: PassengerData | null
+}

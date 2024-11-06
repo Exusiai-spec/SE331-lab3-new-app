@@ -4,6 +4,7 @@ import { ref, onMounted, computed, watch } from 'vue'
 import PassengerCard from '@/components/PassengerCard.vue';
 import PassengerServices from '@/services/PassengerServices';
 import { useRoute, useRouter } from 'vue-router';
+import nProgress from 'nprogress'
 
 const datas = ref<Data[] | null>(null)
 const totalDatas = ref(0)
@@ -29,6 +30,8 @@ watch(() => route.query.page, (newPage) => {
 }, { immediate: true })
 
 onMounted(() => {
+  datas.value = null
+  nProgress.start()
   fetchPassengers()
 })
 
